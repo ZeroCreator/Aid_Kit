@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аптечка гомеопатических средств</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f7f2;
+            color: #333;
+            line-height: 1.5;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a8c8b5;
+        }
+
+        h1 {
+            color: #2d5540;
+            margin-bottom: 5px;
+            font-size: 2.2rem;
+            font-weight: 300;
+        }
+
+        .subtitle {
+            color: #5f7c6b;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #c8d9ce;
+        }
+
+        .section-title {
+            background-color: #dbeae1;
+            padding: 16px 22px;
+            cursor: pointer;
+            color: #355c46;
+            border-bottom: 1px solid #b8d0c3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .section-title:hover {
+            background-color: #d1e4d9;
+        }
+
+        .section-title h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .toggle-btn {
+            background-color: #8fc0a3;
+            color: #234633;
+            border: none;
+            border-radius: 5px;
+            padding: 6px 14px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 400;
+        }
+
+        .toggle-btn:hover {
+            background-color: #7daf91;
+            color: #1a3426;
+        }
+
+        .content {
+            padding: 22px;
+            background-color: #ffffff;
+        }
+
+        .content.hidden {
+            display: none;
+        }
+
+        .medicine-block {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            color: #3a4d42;
+            letter-spacing: 0.01em;
+        }
+
+        .medicine-item {
+            padding: 3px 0;
+            margin-bottom: 2px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #b8d0c3;
+            color: #5f7c6b;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.3rem;
+            }
+
+            .content {
+                padding: 18px;
+            }
+
+            .medicine-block {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Аптечка гомеопатических средств</h1>
+        <div class="subtitle">Домашние гомеопатические препараты</div>
+    </header>
+
+    <div class="section" id="schussler">
+        <div class="section-title">
+            <h2>Соли Шюсслера</h2>
+            <button class="toggle-btn" id="toggle-schussler">Свернуть</button>
+        </div>
+        <div class="content" id="schussler-content">
+            <div class="medicine-block">
+- № 4 Kalium chloratum х 2 + таблетки (Для слизистых оболочек. Ринит, конъюктивит, слезотечение, кашель. При слизистых выделениях, воспалениях)
+- № 5 Kalium phosphoricum (Укрепление мышц и нервов. Слабость, истощение, тревога с сердцебиением. Для нервной систмы, усталости, стресса.)
+- № 7 Magnesium phosphoricum х 2 (При болях и спазмах. Высокое кровяное давление, головные боли, стресс, бессонница. При спазмах, судорогах, болях.)
+- № 11 Silicea (Укрепление сухожилий, хрящей, костей, волос и ногтей. Для кожи, волос, ногтей, при гнойных процессах.)
+- № 22 Calcium carbonicum Hahnemanni (Профилактика преждевременного старения. Истощение организма. При рахите, слабости костей, замедленном развитии.)
+- № 23 Natrium bicarbonicum (Стимуляция обмена веществ. Изжога, заболеваний поджелудочной железы. При изжоге, фцидозе, нарушениях пищеварения.)
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Гутта</h2>
+            <button class="toggle-btn">Свернуть</button>
+        </div>
+        <div class="content">
+            <div class="medicine-block">
+- Aconit C30
+- Arnica montana C30, C200, C1000
+- Arsenicum album C30, C200
+- Bacillus sycoccus C30
+- Belladonna C30
+- Calcarea carbonica C30, C200
+- Calcarea phosphorica D6
+- Cina C30, C200
+- Coffea cruda C6
+- Cuprum metallicum C30
+- Iris C30, C200
+- Kalium bichromicum C6
+- Kalium carbonicum LM-6
+- Lachesis C30
+- Licopodium C200, LM-1
+- Natrium muriaticum C30, C200, C1000
+- Nux vomica C30
+- Phosphoricum acidum C30, C200
+- Sepia C30, C200, C1000
+- Staphisagria C30, C200
+- Stramonium C200
+- Strontium carbonicum C200
+- Sulphur LM-1
+- Symphytum C30
+- Rhus toxicodendron C30, C200
+- Ruta C6, C30
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Доктор Н</h2>
+            <button class="toggle-btn">Свернуть</button>
+        </div>
+        <div class="content">
+            <div class="medicine-block">
+- Antimonium tartaricum C30
+- Arnica C200
+- Ignatia C200
+- Licopodium C30
+- NaCl C30
+- Nux vom C200
+- Phosphorus C30
+- Sepia C30
+- Sulphur C30, C200
+- Thuja C30, C200
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Буарон</h2>
+            <button class="toggle-btn">Свернуть</button>
+        </div>
+        <div class="content">
+            <div class="medicine-block">
+- Ignatia C30
+- Iris C9
+- Medorrhinum C30
+- Nux C30
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggle-schussler');
+            const schusslerContent = document.getElementById('schussler-content');
+
+            toggleButton.addEventListener('click', function() {
+                if (schusslerContent.classList.contains('hidden')) {
+                    schusslerContent.classList.remove('hidden');
+                    toggleButton.textContent = 'Свернуть';
+                } else {
+                    schusslerContent.classList.add('hidden');
+                    toggleButton.textContent = 'Развернуть';
+                }
+            });
+
+            // Добавляем возможность сворачивания/разворачивания для всех секций
+            const allToggleButtons = document.querySelectorAll('.section-title .toggle-btn');
+
+            allToggleButtons.forEach(button => {
+                // Пропускаем первую кнопку, которая уже обработана
+                if (button.id === 'toggle-schussler') return;
+
+                button.addEventListener('click', function() {
+                    const content = this.closest('.section-title').nextElementSibling;
+
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        this.textContent = 'Свернуть';
+                    } else {
+                        content.classList.add('hidden');
+                        this.textContent = 'Развернуть';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
